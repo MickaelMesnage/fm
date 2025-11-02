@@ -1,0 +1,17 @@
+{
+  "name": "fm",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:all": "cd domain && npm install && cd ../backend && npm install && cd ../frontend && npm install",
+    "build:all": "npm run build --workspace=domain && npm run build --workspace=backend",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev"
+  },
+  "workspaces": [
+    "domain",
+    "backend",
+    "frontend"
+  ]
+}
+
