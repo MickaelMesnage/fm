@@ -1,4 +1,4 @@
-import { TeamRepository } from "./infrastructure/repositories/teamRepository.js";
+import { TeamRepository } from "@/infrastructure/repositories/teamRepository.js";
 
 export const initRepositories = () => {
   return {

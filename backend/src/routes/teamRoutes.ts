@@ -2,10 +2,10 @@ import { FastifyInstance } from "fastify";
 import {
   createTeamSchema,
   CreateTeamUseCase,
-} from "../application/usecases/team/createTeamUseCase.js";
-import { GetTeamsUseCase } from "../application/usecases/team/getTeamsUseCase.js";
-import { services } from "../initServices.js";
-import { ValidationError } from "./utils.js";
+} from "@/application/usecases/team/createTeamUseCase.js";
+import { GetTeamsUseCase } from "@/application/usecases/team/getTeamsUseCase.js";
+import { services } from "@/initServices.js";
+import { ValidationError } from "@/routes/utils.js";
 
 const createTeamUseCase = new CreateTeamUseCase({ services });
 const getTeamsUseCase = new GetTeamsUseCase({ services });

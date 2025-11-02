@@ -1,4 +1,4 @@
-import { SPORTS, type Sport } from "../types/sports.js";
+import { SPORTS, type Sport } from "@/domain/types/sports.js";
 import { z } from "zod";
 
 export const teamEntityPropsSchema = z.object({

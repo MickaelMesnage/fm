@@ -1,6 +1,6 @@
 import { TeamEntity, TeamEntityProps } from "@fm/domain";
-import type { TeamRepository } from "../infrastructure/repositories/teamRepository.js";
-import { Repositories } from "../initRepositories.js";
+import type { TeamRepository } from "@/infrastructure/repositories/teamRepository.js";
+import { Repositories } from "@/initRepositories.js";
 import { v4 as uuidv4 } from "uuid";
 
 export class TeamService {

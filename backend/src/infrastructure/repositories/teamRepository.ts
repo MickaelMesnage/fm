@@ -1,5 +1,5 @@
 import { TeamEntity } from "@fm/domain";
-import { prisma } from "../database/prisma.js";
+import { prisma } from "@/infrastructure/database/prisma.js";
 
 export class TeamRepository {
   async create(team: TeamEntity): Promise<TeamEntity> {

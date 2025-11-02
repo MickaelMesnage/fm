@@ -1,10 +1,10 @@
-import { TeamService } from "../../../services/teamService.js";
-import { Services } from "../../../initServices.js";
+import { TeamService } from "@/services/teamService.js";
+import { Services } from "@/initServices.js";
 import { z } from "zod";
 import {
   TeamEntity,
   teamEntityPropsSchema,
-} from "../../../domain/entities/TeamEntity.js";
+} from "@/domain/entities/TeamEntity.js";
 
 export const createTeamSchema = z.object({
   data: teamEntityPropsSchema.omit({ id: true }),

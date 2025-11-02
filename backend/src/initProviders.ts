@@ -1,4 +1,4 @@
-import { EmailProvider } from "./infrastructure/providers/emailProvider.js";
+import { EmailProvider } from "@/infrastructure/providers/emailProvider.js";
 
 const initProviders = () => {
   return {

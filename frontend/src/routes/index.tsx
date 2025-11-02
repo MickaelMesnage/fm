@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { useQuery } from '@tanstack/react-query';
-import { teamApi } from '../api/teamApi';
+import { teamApi } from '@/api/teamApi';
 
 export const Route = createFileRoute('/')({
   component: TeamList,

@@ -1,7 +1,7 @@
 import "dotenv/config";
 import Fastify from "fastify";
 import cors from "@fastify/cors";
-import { teamRoutes } from "./routes/teamRoutes.js";
+import { teamRoutes } from "@/routes/teamRoutes.js";
 
 const fastify = Fastify({
   logger: true,

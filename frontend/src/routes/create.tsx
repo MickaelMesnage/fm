@@ -2,7 +2,7 @@ import { createFileRoute, useNavigate } from '@tanstack/react-router';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { useState } from 'react';
 import { SPORTS, type Sport } from '@fm/domain';
-import { teamApi } from '../api/teamApi';
+import { teamApi } from '@/api/teamApi';
 
 export const Route = createFileRoute('/create')({
   component: CreateTeam,
