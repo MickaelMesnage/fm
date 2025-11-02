@@ -2,8 +2,8 @@ import { FastifyInstance } from "fastify";
 import {
   createTeamSchema,
   CreateTeamUseCase,
-} from "../application/usecases/team/CreateTeamUseCase";
-import { GetTeamsUseCase } from "../application/usecases/team/GetTeamsUseCase";
+} from "../application/usecases/team/createTeamUseCase";
+import { GetTeamsUseCase } from "../application/usecases/team/getTeamsUseCase";
 import { services } from "../initServices";
 import { ValidationError } from "./utils";
 

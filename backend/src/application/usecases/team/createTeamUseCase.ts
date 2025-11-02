@@ -1,5 +1,5 @@
 import { TeamEntity, teamEntityPropsSchema } from "@fm/domain";
-import { TeamService } from "../../../services/teamServicea";
+import { TeamService } from "../../../services/teamService";
 import { Services } from "../../../initServices";
 import { z } from "zod";
 
