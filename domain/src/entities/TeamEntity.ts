@@ -1,10 +1,9 @@
 import { SPORTS, type Sport } from "../types/sports";
 import { v4 as uuidv4 } from "uuid";
 import { z } from "zod";
-import { ValidationError } from "../errors";
 
 export const teamEntityPropsSchema = z.object({
-  id: z.string().optional(),
+  id: z.string(),
   name: z.string(),
   sport: z.enum(SPORTS),
 });
@@ -16,15 +15,9 @@ export class TeamEntity {
   name: string;
   sport: Sport;
 
-  constructor(props: unknown) {
-    const { success, error, data } = teamEntityPropsSchema.safeParse(props);
-
-    if (!success) {
-      throw new ValidationError(error.message);
-    }
-
-    this.id = data.id ?? uuidv4();
-    this.name = data.name;
-    this.sport = data.sport;
+  constructor(props: TeamEntityProps) {
+    this.id = props.id;
+    this.name = props.name;
+    this.sport = props.sport;
   }
 }

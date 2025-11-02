@@ -1,6 +1,13 @@
-import { TeamEntity } from "@fm/domain";
-import { TeamService } from "../../../domain/services/TeamService";
+import { TeamEntity, teamEntityPropsSchema } from "@fm/domain";
+import { TeamService } from "../../../services/TeamService";
 import { Services } from "../../../initServices";
+import { z } from "zod";
+
+export const createTeamSchema = z.object({
+  data: teamEntityPropsSchema.omit({ id: true }),
+});
+
+type CreateTeamDTO = z.infer<typeof createTeamSchema>;
 
 export class CreateTeamUseCase {
   private teamService: TeamService;
@@ -9,7 +16,8 @@ export class CreateTeamUseCase {
     this.teamService = services.teamService;
   }
 
-  async execute(data: unknown): Promise<TeamEntity> {
-    return this.teamService.createTeam(data);
+  async execute({ data }: CreateTeamDTO): Promise<TeamEntity> {
+    const createdTeam = await this.teamService.createTeam(data);
+    return createdTeam;
   }
 }

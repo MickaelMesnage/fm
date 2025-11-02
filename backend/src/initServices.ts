@@ -1,4 +1,4 @@
-import { TeamService } from "./domain/services/TeamService";
+import { TeamService } from "./services/TeamService";
 import { repositories, Repositories } from "./initRepositories";
 import { providers, Providers } from "./initProviders";
 
