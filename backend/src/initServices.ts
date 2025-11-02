@@ -1,4 +1,4 @@
-import { TeamService } from "./services/TeamService";
+import { TeamService } from "./services/teamServicea";
 import { repositories, Repositories } from "./initRepositories";
 import { providers, Providers } from "./initProviders";
 

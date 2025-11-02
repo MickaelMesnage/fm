@@ -1,5 +1,5 @@
 import type { TeamEntity } from "@fm/domain";
-import { TeamService } from "../../../services/TeamService";
+import { TeamService } from "../../../services/teamServicea";
 import { Services } from "../../../initServices";
 
 export class GetTeamsUseCase {
