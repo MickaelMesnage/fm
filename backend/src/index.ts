@@ -1,14 +1,10 @@
 import "dotenv/config";
 import Fastify from "fastify";
 import cors from "@fastify/cors";
-import { teamRoutes } from "./routes/teamRoutes";
+import { teamRoutes } from "./routes/teamRoutes.js";
 
 const fastify = Fastify({
   logger: true,
-});
-
-await fastify.register(cors, {
-  origin: true,
 });
 
 async function registerRoutes() {
@@ -18,6 +14,10 @@ async function registerRoutes() {
 // Démarrage du serveur
 async function start() {
   try {
+    await fastify.register(cors, {
+      origin: true,
+    });
+
     await registerRoutes();
 
     await fastify.listen({

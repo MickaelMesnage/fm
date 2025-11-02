@@ -1,6 +1,6 @@
-import type { TeamEntity } from "@fm/domain";
-import { TeamService } from "../../../services/teamService";
-import { Services } from "../../../initServices";
+import { TeamService } from "../../../services/teamService.js";
+import { Services } from "../../../initServices.js";
+import { TeamEntity } from "../../../domain/entities/TeamEntity.js";
 
 export class GetTeamsUseCase {
   private teamService: TeamService;

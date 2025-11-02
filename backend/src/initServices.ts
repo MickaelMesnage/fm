@@ -1,10 +1,9 @@
-import { TeamService } from "./services/teamService";
-import { repositories, Repositories } from "./initRepositories";
-import { providers, Providers } from "./initProviders";
+import { TeamService } from "./services/teamService.js";
+import { repositories, Repositories } from "./initRepositories.js";
+import { providers, Providers } from "./initProviders.js";
 
 const initServices = ({
   repositories,
-  providers,
 }: {
   repositories: Repositories;
   providers: Providers;

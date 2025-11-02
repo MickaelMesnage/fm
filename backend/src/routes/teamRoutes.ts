@@ -2,10 +2,10 @@ import { FastifyInstance } from "fastify";
 import {
   createTeamSchema,
   CreateTeamUseCase,
-} from "../application/usecases/team/createTeamUseCase";
-import { GetTeamsUseCase } from "../application/usecases/team/getTeamsUseCase";
-import { services } from "../initServices";
-import { ValidationError } from "./utils";
+} from "../application/usecases/team/createTeamUseCase.js";
+import { GetTeamsUseCase } from "../application/usecases/team/getTeamsUseCase.js";
+import { services } from "../initServices.js";
+import { ValidationError } from "./utils.js";
 
 const createTeamUseCase = new CreateTeamUseCase({ services });
 const getTeamsUseCase = new GetTeamsUseCase({ services });
@@ -21,9 +21,7 @@ export async function teamRoutes(fastify: FastifyInstance) {
       return reply.code(201).send(team);
     } catch (error) {
       if (error instanceof ValidationError) {
-        return reply
-          .code(400)
-          .send({ message: error.message, cause: error.cause });
+        return reply.code(400).send({ message: error.message });
       }
       if (error instanceof Error) {
         return reply.code(500).send({ message: error.message });
@@ -32,7 +30,7 @@ export async function teamRoutes(fastify: FastifyInstance) {
     }
   });
 
-  fastify.get("/", async (request, reply) => {
+  fastify.get("/", async (_request, reply) => {
     const teams = await getTeamsUseCase.execute();
     return reply.send(teams);
   });

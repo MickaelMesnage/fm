@@ -1,3 +1,2 @@
-export * from "./dto";
-export * from "./entities";
-export * from "./types";
+export * from "./entities/index.js";
+export * from "./types/index.js";

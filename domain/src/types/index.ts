@@ -1,1 +1,1 @@
-export * from "./sports";
+export * from "./sports.js";

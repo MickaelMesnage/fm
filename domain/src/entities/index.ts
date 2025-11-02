@@ -1,1 +1,1 @@
-export * from "./TeamEntity";
+export * from "./TeamEntity.js";
